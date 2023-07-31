@@ -5,13 +5,12 @@ import java.util.Scanner;
 public class AddressBookMain {
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book");
-
+        System.out.println( "1.AddContact\n" + "2.DisplayContact\n" + "3.EditContact\n");
         AddressBook obj = new AddressBook();
         Scanner sc = new Scanner(System.in);
         int number;
         do {
-            System.out.println( "1.AddContact\n" + "2.DisplayContact");
-            System.out.println("Enter the number");
+             System.out.println("Enter the number");
             number = sc.nextInt();
 
             switch (number){
@@ -21,9 +20,12 @@ public class AddressBookMain {
                 case 2:
                     obj.displayContacts();
                     break;
+                case 3:
+                    obj.editContacts();
+                    break;
                 default:
                     System.out.println("invalid details!!");
             }
-        }while (number != 2);
+        }while (number != 4);
     }
 }
