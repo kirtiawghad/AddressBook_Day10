@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AddressBookMain {
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book");
-        System.out.println( "1.AddContact\n" + "2.DisplayContact\n" + "3.EditContact\n");
+        System.out.println( "1.AddContact\n" + "2.DisplayContact\n" + "3.EditContact\n"+ "4.DeleteContact\n");
         AddressBook obj = new AddressBook();
         Scanner sc = new Scanner(System.in);
         int number;
@@ -23,9 +23,12 @@ public class AddressBookMain {
                 case 3:
                     obj.editContacts();
                     break;
+                case 4:
+                    obj.deleteContacts();
+                    break;
                 default:
                     System.out.println("invalid details!!");
             }
-        }while (number != 4);
+        }while (number != 5);
     }
 }
